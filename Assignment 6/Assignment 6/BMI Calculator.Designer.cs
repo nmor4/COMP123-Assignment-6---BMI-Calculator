@@ -38,14 +38,15 @@
             this.BMILabel = new System.Windows.Forms.Label();
             this.BMIDisplay = new System.Windows.Forms.TextBox();
             this.MetricButton = new System.Windows.Forms.RadioButton();
+            this.ResetButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // ImperialButton
             // 
             this.ImperialButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ImperialButton.Location = new System.Drawing.Point(175, 382);
+            this.ImperialButton.Location = new System.Drawing.Point(105, 382);
             this.ImperialButton.Name = "ImperialButton";
-            this.ImperialButton.Size = new System.Drawing.Size(126, 39);
+            this.ImperialButton.Size = new System.Drawing.Size(103, 39);
             this.ImperialButton.TabIndex = 0;
             this.ImperialButton.Text = "Imperial";
             this.ImperialButton.UseVisualStyleBackColor = true;
@@ -127,20 +128,34 @@
             // 
             // MetricButton
             // 
+            this.MetricButton.Checked = true;
             this.MetricButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MetricButton.Location = new System.Drawing.Point(19, 380);
+            this.MetricButton.Location = new System.Drawing.Point(3, 382);
             this.MetricButton.Name = "MetricButton";
-            this.MetricButton.Size = new System.Drawing.Size(126, 39);
+            this.MetricButton.Size = new System.Drawing.Size(86, 39);
             this.MetricButton.TabIndex = 11;
+            this.MetricButton.TabStop = true;
             this.MetricButton.Text = "Metric";
             this.MetricButton.UseVisualStyleBackColor = true;
             this.MetricButton.CheckedChanged += new System.EventHandler(this.MetricButton_CheckedChanged);
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.Location = new System.Drawing.Point(210, 383);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.Size = new System.Drawing.Size(91, 38);
+            this.ResetButton.TabIndex = 12;
+            this.ResetButton.Text = "Reset";
+            this.ResetButton.UseVisualStyleBackColor = true;
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
             // 
             // BMICalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 40F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(302, 433);
+            this.Controls.Add(this.ResetButton);
             this.Controls.Add(this.MetricButton);
             this.Controls.Add(this.BMIText);
             this.Controls.Add(this.BMIDisplay);
@@ -175,6 +190,7 @@
         private System.Windows.Forms.Button CalculateBMIButton;
         private System.Windows.Forms.TextBox BMIText;
         private System.Windows.Forms.RadioButton MetricButton;
+        private System.Windows.Forms.Button ResetButton;
     }
 }
 
